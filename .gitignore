@@ -17,10 +17,6 @@ yarn-error.log*
 /build/
 !.electron-builder.config.js
 
-# icon conversion artifacts
-icon.iconset/
-*.icns
-
 *.swp
 *.swo
 Thumbs.db

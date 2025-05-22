@@ -82,4 +82,4 @@ or service provided by Amazon.
 ### Credits
 
 - built with [Electron](https://www.electronjs.org/)
-- Icon generated with AI assistance for personal use (not affiliated with Amazon)
+- app icon from [macOSicons](https://macosicons.com/#/?icon=Fm9AOGZqSO)
