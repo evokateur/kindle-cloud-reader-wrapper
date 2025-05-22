@@ -2,6 +2,8 @@
 
 This is an **unofficial desktop wrapper** for [Kindle Cloud Reader](https://read.amazon.com), built using [Electron](https://www.electronjs.org/). It provides a native macOS-style desktop experience for reading your Kindle books in a standalone window.
 
+![screenshot](./assets/screenshot.png)
+
 ---
 
 ## Features
