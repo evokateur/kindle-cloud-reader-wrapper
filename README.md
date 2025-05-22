@@ -51,7 +51,7 @@ See `package.json` → `build` for config details.
 
 ---
 
-### Disclaimer
+## Disclaimer
 
 This project is an unofficial wrapper around the Kindle Cloud Reader provided
 by Amazon. It is intended for personal use only to enable a native desktop
@@ -71,7 +71,7 @@ please open an issue or contact the maintainer directly.
 
 ---
 
-### License
+## License
 
 This project is licensed under the [MIT License](https://mit-license.org/).
 This license applies only to the code in this repository, not to any content
@@ -79,7 +79,7 @@ or service provided by Amazon.
 
 ---
 
-### Credits
+## Credits
 
 - built with [Electron](https://www.electronjs.org/)
 - app icon from [macOSicons](https://macosicons.com/#/?icon=Fm9AOGZqSO)
