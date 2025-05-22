@@ -1,6 +1,8 @@
 # Kindle Cloud Reader (Unofficial Desktop Wrapper)
 
-This is an **unofficial desktop wrapper** for [Kindle Cloud Reader](https://read.amazon.com), built using [Electron](https://www.electronjs.org/). It provides a native macOS-style desktop experience for reading your Kindle books in a standalone window.
+This is an **unofficial desktop wrapper** for [Kindle Cloud Reader](https://read.amazon.com),
+built using [Electron](https://www.electronjs.org/). It provides a native
+macOS-style desktop experience for reading your Kindle books in a standalone window.
 
 ![screenshot](./assets/screenshot.png)
 
@@ -44,27 +46,36 @@ To build a macOS app (.app or .dmg):
 npm run package
 ```
 
-Output will appear in the `dist/` directory. See `package.json` → `build` for config details.
+Output will appear in the `dist/` directory.
+See `package.json` → `build` for config details.
 
 ---
 
 ### Disclaimer
 
-This project is an unofficial wrapper around the Kindle Cloud Reader provided by Amazon. It is intended for personal use only to enable a native desktop experience on older machines that can no longer run the official Kindle Reader app.
+This project is an unofficial wrapper around the Kindle Cloud Reader provided
+by Amazon. It is intended for personal use only to enable a native desktop
+experience on older machines that can no longer run the official Kindle Reader app.
 
-This project is not affiliated with, endorsed by, or connected to Amazon.com, Inc. or any of its subsidiaries.
-All trademarks and copyrights related to Kindle, Amazon, and their associated services belong to their respective owners.
+This project is not affiliated with, endorsed by, or connected to
+Amazon.com, Inc. or any of its subsidiaries.
+All trademarks and copyrights related to Kindle, Amazon, and their associated
+services belong to their respective owners.
 
-No content is stored, modified, or redistributed by this application — it merely opens the [official web application](https://read.amazon.com) inside a standalone Electron window.
+No content is stored, modified, or redistributed by this application — it
+merely opens the [official web application](https://read.amazon.com) inside a
+standalone Electron window.
 
-If you are an Amazon representative and have concerns about this repository, please open an issue or contact the maintainer directly.
+If you are an Amazon representative and have concerns about this repository,
+please open an issue or contact the maintainer directly.
 
 ---
 
 ### License
 
 This project is licensed under the [MIT License](https://mit-license.org/).
-This license applies only to the code in this repository, not to any content or service provided by Amazon.
+This license applies only to the code in this repository, not to any content
+or service provided by Amazon.
 
 ---
 
