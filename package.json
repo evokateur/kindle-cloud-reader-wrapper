@@ -1,5 +1,5 @@
 {
-  "name": "kindle-cloud-reader",
+  "name": "kindle-cloud-reader-wrapper",
   "version": "1.0.0",
   "description": "Kindle Cloud Reader desktop wrapper using Electron",
   "main": "main.js",
@@ -14,8 +14,8 @@
     "electron-builder": "^24.13.0"
   },
   "build": {
-    "appId": "com.evokateur.kindle",
-    "productName": "Kindle Cloud Reader",
+    "appId": "com.evokateur.kindle-cloud-reader-wrapper",
+    "productName": "Kindle Cloud Reader Wrapper",
     "mac": {
       "target": "dmg",
       "icon": "assets/icon.icns"
