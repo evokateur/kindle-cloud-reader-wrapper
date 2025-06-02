@@ -15,7 +15,7 @@
   },
   "build": {
     "appId": "com.evokateur.kindle-cloud-reader-wrapper",
-    "productName": "Kindle Cloud Reader Wrapper",
+    "productName": "Kindle Cloud Reader",
     "mac": {
       "target": "dmg",
       "icon": "assets/icon.icns"
