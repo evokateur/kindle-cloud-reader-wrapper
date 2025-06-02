@@ -1,4 +1,4 @@
-const { app, BrowserWindow, nativeImage } = require('electron');
+const { app, BrowserWindow, nativeImage, shell } = require('electron');
 const path = require('path');
 
 function createWindow()
@@ -15,6 +15,11 @@ function createWindow()
             sandbox: true,
             contextIsolation: true,
         },
+    });
+
+    win.webContents.setWindowOpenHandler((details) => {
+        shell.openExternal(details.url);
+        return { action: "deny" };
     });
 
     win.loadURL("https://read.amazon.com");
