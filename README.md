@@ -2,7 +2,7 @@
 
 This is an **unofficial desktop wrapper** for [Yahoo! Mail](https://mail.yahoo.com),
 built using [Electron](https://www.electronjs.org/). It provides a native
-macOS-style desktop experience for reading your Kindle books in a standalone window.
+macOS-style desktop experience for reading your Yahoo! mail in a standalone window.
 
 ---
 
