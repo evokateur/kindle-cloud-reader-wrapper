@@ -49,6 +49,12 @@ npm run package
 Output will appear in the `dist/` directory.
 See `package.json` → `build` for config details.
 
+## Using this code as a template
+
+This code can be easily modified to create PWAs for other web sites,
+such as [Yahoo! Mail](https://github.com/evokateur/kindle-cloud-reader-wrapper/tree/yahoo-mail)
+or [YouTube](https://github.com/evokateur/kindle-cloud-reader-wrapper/tree/youtube).
+
 ---
 
 ## Disclaimer
