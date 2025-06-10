@@ -1,7 +1,7 @@
 {
-  "name": "kindle-cloud-reader-wrapper",
+  "name": "yahoo-mail-wrapper",
   "version": "1.0.0",
-  "description": "Kindle Cloud Reader desktop wrapper using Electron",
+  "description": "Yahoo! Mail desktop wrapper using Electron",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -14,11 +14,11 @@
     "electron-builder": "^24.13.0"
   },
   "build": {
-    "appId": "com.evokateur.kindle-cloud-reader-wrapper",
-    "productName": "Kindle Cloud Reader",
+    "appId": "com.evokateur.yahoo-mail-wrapper",
+    "productName": "Yahoo! Mail",
     "mac": {
       "target": "dmg",
-      "icon": "assets/icon.icns"
+      "icon": "assets/icon.png"
     }
   }
 }

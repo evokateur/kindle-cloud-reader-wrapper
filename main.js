@@ -10,7 +10,7 @@ function createWindow()
         height: 800,
         icon,
         autoHideMenuBar: true,
-        title: "Kindle Cloud Reader",
+        title: "Yahoo! Mail",
         webPreferences: {
             sandbox: true,
             contextIsolation: true,
@@ -22,7 +22,7 @@ function createWindow()
         return { action: "deny" };
     });
 
-    win.loadURL("https://read.amazon.com");
+    win.loadURL("https://mail.yahoo.com/n/inbox/priority");
 }
 
 app.whenReady().then(createWindow);
