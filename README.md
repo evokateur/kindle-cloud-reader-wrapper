@@ -22,7 +22,7 @@ macOS-style desktop experience for reading your Yahoo! mail in a standalone wind
 ```bash
 git clone https://github.com/yourusername/kindle-cloud-reader-wrapper.git
 cd kindle-cloud-reader-wrapper
-checkout yahoo-mail
+git checkout yahoo-mail
 ```
 
 ### 2. Install dependencies
