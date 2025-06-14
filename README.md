@@ -54,8 +54,3 @@ See `package.json` → `build` for config details.
 This code can be easily modified to create PWAs for other web sites,
 such as [Yahoo! Mail](https://github.com/evokateur/kindle-cloud-reader-wrapper/tree/yahoo-mail)
 or [YouTube](https://github.com/evokateur/kindle-cloud-reader-wrapper/tree/youtube).
-
-## Credits
-
-- built with [Electron](https://www.electronjs.org/)
-- app icon from [macOSicons](https://macosicons.com/#/?icon=Fm9AOGZqSO)
