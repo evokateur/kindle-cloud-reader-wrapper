@@ -1,6 +1,6 @@
-# Yahoo! Mail (Unofficial Desktop Wrapper)
+# Yahoo! Mail PWA Wrapper
 
-This is an **unofficial desktop wrapper** for [Yahoo! Mail](https://mail.yahoo.com),
+This is an PWA wrapper for [Yahoo! Mail](https://mail.yahoo.com),
 built using [Electron](https://www.electronjs.org/). It provides a native
 macOS-style desktop experience for reading your Yahoo! mail in a standalone window.
 
@@ -47,16 +47,6 @@ npm run package
 
 Output will appear in the `dist/` directory.
 See `package.json` → `build` for config details.
-
----
-
-## License
-
-This project is licensed under the [MIT License](https://mit-license.org/).
-This license applies only to the code in this repository, not to any content
-or service provided by Amazon.
-
----
 
 ## Credits
 
