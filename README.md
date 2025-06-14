@@ -47,7 +47,3 @@ npm run package
 
 Output will appear in the `dist/` directory.
 See `package.json` → `build` for config details.
-
-## Credits
-
-- built with [Electron](https://www.electronjs.org/)
