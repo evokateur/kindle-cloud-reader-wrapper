@@ -4,6 +4,7 @@ const path = require('path');
 function createWindow()
 {
     const icon = nativeImage.createFromPath(path.join(__dirname, 'assets/icon.png'));
+    const appUrl = "https://read.amazon.com";
 
     const win = new BrowserWindow({
         width: 1200,
@@ -14,15 +15,29 @@ function createWindow()
         webPreferences: {
             sandbox: true,
             contextIsolation: true,
+            nodeIntegration: false,
+            enableRemoteModule: false
         },
     });
 
     win.webContents.setWindowOpenHandler((details) => {
-        shell.openExternal(details.url);
+        try {
+            const url = new URL(details.url);
+            if (url.protocol == 'http:' || url.protocol == 'https:') {
+                shell.openExternal(details.url);
+            }
+        } catch (error) {}
+
         return { action: "deny" };
     });
 
-    win.loadURL("https://read.amazon.com");
+    win.webContents.on('will-navigate', (event, url) => {
+        if (!url.startsWith(appUrl)) {
+            event.preventDefault();
+        }
+    });
+
+    win.loadURL(appUrl);
 }
 
 app.whenReady().then(createWindow);
