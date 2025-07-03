@@ -2,6 +2,7 @@
     "name": "kindle-cloud-reader-wrapper",
     "version": "1.0.0",
     "description": "Kindle Cloud Reader desktop wrapper using Electron",
+    "type": "module",
     "main": "main.js",
     "scripts": {
         "start": "electron .",
