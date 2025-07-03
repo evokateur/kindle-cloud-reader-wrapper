@@ -10,7 +10,7 @@
   "author": "Wesley Hinkle",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^29.0.0",
+    "electron": "^37.2.0",
     "electron-builder": "^24.13.0"
   },
   "build": {
