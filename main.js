@@ -38,6 +38,9 @@ function createWindow()
     win.webContents.on('will-navigate', (event, url) => {
         if (!url.startsWith(appUrl)) {
             event.preventDefault();
+            shell.openExternal(url).catch(error => {
+                console.error('Failed to open external URL:', error);
+            });
         }
     });
 
@@ -47,7 +50,7 @@ function createWindow()
 app.whenReady().then(createWindow);
 
 app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') app.quit();
+    app.quit();
 });
 
 app.on('activate', () => {
