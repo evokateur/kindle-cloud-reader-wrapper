@@ -1,5 +1,6 @@
 {
     "name": "kindle-cloud-reader-wrapper",
+    "productName": "Kindle Cloud Reader",
     "version": "1.0.0",
     "description": "Kindle Cloud Reader desktop wrapper using Electron",
     "type": "module",
@@ -8,7 +9,7 @@
         "start": "electron .",
         "package": "electron-builder"
     },
-    "author": "Wesley Hinkle",
+    "author": "Amazon",
     "license": "MIT",
     "devDependencies": {
         "electron": "^37.2.0",
