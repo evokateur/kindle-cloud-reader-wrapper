@@ -12,8 +12,8 @@ Links that open in a new window will open in your default browser.
 ## Features
 
 - Opens [https://read.amazon.com](https://read.amazon.com) in a clean desktop app
-- Resizable window with macOS-native look and feel
-- Auto-hide menu bar for a minimalist reading experience
+- Minimalist resizable window with macOS-native look and feel
+- Mimics the Kindle app by starting in the same location it was in when last closed
 - Cross-platform potential (macOS, Windows, Linux)
 
 ---
