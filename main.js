@@ -76,10 +76,6 @@ function createWindow()
         }
     });
 
-    win.webContents.on('did-navigate', (event, url) => {
-        console.log(`Did navigate to: ${url}`);
-    });
-
     let lastUrl = '';
     const urlCheckInterval = setInterval(() => {
         if (win.isDestroyed()) {
@@ -91,12 +87,8 @@ function createWindow()
             .then(currentUrl => {
                 if (currentUrl !== lastUrl) {
                     lastUrl = currentUrl;
-                    console.log(`URL changed to: ${currentUrl}`);
-                    console.log(`Does ${currentUrl} start with ${baseUrl}?`)
                     if (currentUrl.startsWith(baseUrl)) {
-                        console.log('Yes.');
                         const location = currentUrl.slice(baseUrl.length);
-                        console.log(`Location: ${location}`);
                         const data = { location: location }
                         saveAppData(data);
                     }
