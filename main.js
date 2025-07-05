@@ -8,7 +8,8 @@ const __dirname = path.dirname(__filename);
 function createWindow()
 {
     const icon = nativeImage.createFromPath(path.join(__dirname, 'assets/icon.png'));
-    const appUrl = "https://read.amazon.com";
+    const baseUrl = "https://read.amazon.com";
+    const baseDomain = new URL(baseUrl).hostname.split('.').slice(-2).join('.');
 
     const win = new BrowserWindow({
         width: 1200,
@@ -36,7 +37,8 @@ function createWindow()
     });
 
     win.webContents.on('will-navigate', (event, url) => {
-        if (!url.startsWith(appUrl)) {
+        const urlDomain = new URL(url).hostname.split('.').slice(-2).join('.');
+        if (!(urlDomain === baseDomain || urlDomain.endsWith('.' + baseDomain))) {
             event.preventDefault();
             shell.openExternal(url).catch(error => {
                 console.error('Failed to open external URL:', error);
@@ -44,7 +46,7 @@ function createWindow()
         }
     });
 
-    win.loadURL(appUrl);
+    win.loadURL(baseUrl + '/kindle-library');
 }
 
 app.whenReady().then(createWindow);
