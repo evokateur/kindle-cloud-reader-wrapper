@@ -6,18 +6,33 @@ import path from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const storageFile = path.join(app.getPath('userData'), 'cloud-reader-book-id.json');
+const storageFile = path.join(app.getPath('userData'), 'cloud-reader-data.json');
 
-function getInitialPathOrQuery() {
+function completeUrl(baseUrl) {
+    const data = fetchAppData();
+    return baseUrl + data.location;
+}
+
+function fetchAppData() {
     try {
         if (fs.existsSync(storageFile)) {
             const data = fs.readFileSync(storageFile, 'utf8');
-            // return query string based on stored book id
+            return JSON.parse(data);
         }
     } catch (error) {
-        console.error('Error loading progress:', error);
+        console.error('Error loading application data:', error);
     }
-    return '/kindle-library';
+
+    return { location: '/kindle-library' }
+}
+
+function saveAppData(data) {
+    try {
+        fs.writeFileSync(storageFile, JSON.stringify(data, null, 2));
+        console.log('Saved application data:', JSON.stringify(data));
+    } catch (error) {
+        console.error('Error saving application data:', error);
+    }
 }
 
 function createWindow()
@@ -77,18 +92,13 @@ function createWindow()
                 if (currentUrl !== lastUrl) {
                     lastUrl = currentUrl;
                     console.log(`URL changed to: ${currentUrl}`);
-
-                    if (currentUrl.includes('?asin=')) {
-                        try {
-                            // https://read.amazon.com/kindle-library
-                            // https://read.amazon.com/?asin=B08CHMDKW2&ref_=kwl_kr_iv_rec_2
-                            const urlObj = new URL(currentUrl);
-                            const bookId = urlObj.searchParams.get('asin');
-                            console.log(`Book ID: ${bookId}`);
-
-                        } catch (error) {
-                            console.error('Error parsing URL:', error);
-                        }
+                    console.log(`Does ${currentUrl} start with ${baseUrl}?`)
+                    if (currentUrl.startsWith(baseUrl)) {
+                        console.log('Yes.');
+                        const location = currentUrl.slice(baseUrl.length);
+                        console.log(`Location: ${location}`);
+                        const data = { location: location }
+                        saveAppData(data);
                     }
                 }
             })
@@ -99,7 +109,7 @@ function createWindow()
         clearInterval(urlCheckInterval);
     });
 
-    win.loadURL(baseUrl + getInitialPathOrQuery());
+    win.loadURL(completeUrl(baseUrl));
 }
 
 app.whenReady().then(createWindow);
