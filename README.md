@@ -3,7 +3,6 @@
 This is a PWA wrapper for [Kindle Cloud Reader](https://read.amazon.com),
 built using [Electron](https://www.electronjs.org/). It provides a native
 macOS-style desktop experience for reading Kindle books on [older, non-Metal Macs](https://chatgpt.com/share/6850764a-2418-8012-a04d-2d54a038e04e).
-Links that open in a new window will open in your default browser.
 
 ![screenshot](./assets/screenshot.png)
 
@@ -11,9 +10,9 @@ Links that open in a new window will open in your default browser.
 
 ## Features
 
-- Opens [https://read.amazon.com](https://read.amazon.com) in a clean desktop app
-- Resizable window with macOS-native look and feel
-- Auto-hide menu bar for a minimalist reading experience
+- Opens [https://read.amazon.com](https://read.amazon.com) in a clean window
+- Mimics the Kindle app by starting in the location it was in when last closed
+- External links open in the default browser
 - Cross-platform potential (macOS, Windows, Linux)
 
 ---
