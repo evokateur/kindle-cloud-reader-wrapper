@@ -14,6 +14,8 @@ function createWindow()
         webPreferences: {
             sandbox: true,
             contextIsolation: true,
+            nodeIntegration: false,
+            enableRemoteModule: false
         },
     });
 
@@ -28,7 +30,7 @@ function createWindow()
 app.whenReady().then(createWindow);
 
 app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') app.quit();
+    app.quit();
 });
 
 app.on('activate', () => {

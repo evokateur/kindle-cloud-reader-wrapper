@@ -1,6 +1,5 @@
 {
   "name": "yahoo-mail-wrapper",
-  "productName": "Yahoo! Mail",
   "version": "1.0.0",
   "description": "Yahoo! Mail desktop wrapper using Electron",
   "main": "main.js",
@@ -8,7 +7,7 @@
     "start": "electron .",
     "package": "electron-builder"
   },
-  "author": "Yahoo!",
+  "author": "Wesley Hinkle",
   "license": "MIT",
   "devDependencies": {
     "electron": "^37.2.0",
