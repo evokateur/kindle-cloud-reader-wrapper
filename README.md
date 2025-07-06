@@ -12,7 +12,7 @@ macOS-style desktop experience for reading Kindle books on [older, non-Metal Mac
 
 - Opens [https://read.amazon.com](https://read.amazon.com) in a clean desktop app
 - Minimalist resizable window with macOS-native look and feel
-- Mimics the Kindle app by starting in the same view it was in when last closed
+- Mimics the Kindle app by starting in the location it was in when last closed
 - External links open in the default browser
 - Cross-platform potential (macOS, Windows, Linux)
 
