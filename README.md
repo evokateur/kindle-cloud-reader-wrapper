@@ -13,7 +13,7 @@ Links that open in a new window will open in your default browser.
 
 - Opens [https://read.amazon.com](https://read.amazon.com) in a clean desktop app
 - Minimalist resizable window with macOS-native look and feel
-- Mimics the Kindle app by starting in the last closed view state
+- Mimics the Kindle app by starting in view state it was in when last closed
 - Cross-platform potential (macOS, Windows, Linux)
 
 ---
