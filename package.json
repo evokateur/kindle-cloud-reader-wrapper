@@ -1,6 +1,5 @@
 {
     "name": "kindle-cloud-reader-wrapper",
-    "productName": "Cloud Reader",
     "version": "1.0.0",
     "description": "Kindle Cloud Reader desktop wrapper using Electron",
     "type": "module",
