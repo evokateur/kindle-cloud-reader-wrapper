@@ -1,8 +1,10 @@
-# Kindle Cloud Reader PWA Wrapper
+# Kindle Cloud Reader Wrapper
 
-This is a PWA wrapper for [Kindle Cloud Reader](https://read.amazon.com),
+A desktop app that embeds the [Kindle Cloud Reader](https://read.amazon.com),
 built using [Electron](https://www.electronjs.org/). It provides a native
-macOS-style desktop experience for reading Kindle books on [older, non-Metal Macs](https://chatgpt.com/share/6850764a-2418-8012-a04d-2d54a038e04e).
+macOS-style desktop experience for reading Kindle books on
+[older, non-Metal Macs](https://chatgpt.com/share/6850764a-2418-8012-a04d-2d54a038e04e)
+and, also, some kind of desktop experience on Linux.
 
 ![screenshot](./assets/screenshot.png)
 
@@ -10,10 +12,10 @@ macOS-style desktop experience for reading Kindle books on [older, non-Metal Mac
 
 ## Features
 
-- Opens [https://read.amazon.com](https://read.amazon.com) in a clean window
+- Opens [https://read.amazon.com](https://read.amazon.com) in a clean desktop window
 - Mimics the Kindle app by starting in the location it was in when last closed
 - External links open in the default browser
-- Cross-platform potential (macOS, Windows, Linux)
+- Build targets for macOS and Linux
 
 ---
 
@@ -40,14 +42,14 @@ npm start
 
 ### 4. Packaging the app
 
-To build a macOS app (.app or .dmg):
+To build for macOS (.app or .dmg) or Linux (.AppImage), run:
 
 ```bash
 npm run package
 ```
 
 Output will appear in the `dist/` directory.
-See `package.json` → `build` for config details.
+See `package.json` → `build` for details.
 
 ## Using this code as a template
 
