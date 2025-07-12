@@ -53,5 +53,5 @@ See `package.json` → `build` for details.
 
 ## Using this code as a template
 
-This code can be easily modified to create PWAs for other web sites,
+This code can be easily modified to create a desktop wrapper for another web site,
 such as [Yahoo! Mail](https://github.com/evokateur/kindle-cloud-reader-wrapper/tree/yahoo-mail).
