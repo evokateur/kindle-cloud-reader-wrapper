@@ -19,7 +19,11 @@
         "productName": "Kindle Cloud Reader",
         "mac": {
             "target": "dmg",
-            "icon": "assets/app.icns"
+            "icon": "assets/icon.icns"
+        },
+        "linux": {
+            "target": "AppImage",
+            "icon": "assets/icon.png"
         }
     }
 }
