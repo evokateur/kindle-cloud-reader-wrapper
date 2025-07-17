@@ -2,7 +2,7 @@
 
 A desktop app that embeds the [Kindle Cloud Reader](https://read.amazon.com),
 built using [Electron](https://www.electronjs.org/). It provides a native
-desktop experience for reading Kindle books on
+desktop app experience for reading Kindle books on
 [older, non-Metal Macs](https://chatgpt.com/share/6850764a-2418-8012-a04d-2d54a038e04e)
 as well as Linux.
 
