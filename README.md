@@ -13,9 +13,9 @@ and, also, some kind of desktop experience on Linux.
 ## Features
 
 - Opens [https://read.amazon.com](https://read.amazon.com) in a clean desktop window
-- Mimics the Kindle app by starting in the location it was in when last closed
+- Mimics the Kindle app by starting in the location it was at when last closed
 - External links open in the default browser
-- Build targets for macOS and Linux
+- Has build targets for macOS and Linux
 
 ---
 
