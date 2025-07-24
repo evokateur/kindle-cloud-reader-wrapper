@@ -23,6 +23,7 @@
         },
         "linux": {
             "target": "AppImage",
+            "artifactName": "KindleCloudReader.AppImage",
             "icon": "assets/icon.png"
         }
     }
