@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Check if running on macOS
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    echo "This script is for Linux systems only. On macOS, use the built .dmg package instead."
+    exit 0
+fi
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PACKAGE_JSON="$SCRIPT_DIR/package.json"
 
