@@ -1,21 +1,26 @@
 # Kindle Cloud Reader Wrapper
 
 A desktop app that embeds the [Kindle Cloud Reader](https://read.amazon.com),
-built using [Electron](https://www.electronjs.org/). It provides a native
-macOS-style desktop experience for reading Kindle books on
-[older, non-Metal Macs](https://chatgpt.com/share/6850764a-2418-8012-a04d-2d54a038e04e)
-and, also, some kind of desktop experience on Linux.
+built using [Electron](https://www.electronjs.org/). It provides a native desktop
+experience for reading Kindle books on older,
+[non-Metal Macs](https://chatgpt.com/share/6850764a-2418-8012-a04d-2d54a038e04e) as well as Linux.
 
 ![screenshot](./assets/screenshot.png)
+
+## Disclaimer
+
+This is an unofficial desktop wrapper for Amazon's Kindle Cloud Reader web interface. It is not affiliated with, endorsed by, or sponsored by Amazon. This tool simply provides a desktop application experience for the official Kindle Cloud Reader website (<https://read.amazon.com>) and is intended for users who cannot use the official Kindle applications due to system limitations.
+
+Users must have valid Amazon accounts and Kindle book licenses to access content through this application.
 
 ---
 
 ## Features
 
 - Opens [https://read.amazon.com](https://read.amazon.com) in a clean desktop window
-- Mimics the Kindle app by starting in the location it was in when last closed
+- Preserves your session state (filters, current page, etc.) between app launches
 - External links open in the default browser
-- Build targets for macOS and Linux
+- Can be built for macOS and Linux
 
 ---
 
@@ -53,5 +58,5 @@ See `package.json` → `build` for details.
 
 ## Using this code as a template
 
-This code can be easily modified to create PWAs for other web sites,
+This code can be easily modified to create desktop wrappers for other web sites,
 such as [Yahoo! Mail](https://github.com/evokateur/kindle-cloud-reader-wrapper/tree/yahoo-mail).
