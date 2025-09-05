@@ -1,6 +1,6 @@
-# Yahoo! Mail PWA Wrapper
+# Yahoo! Mail Desktop Wrapper
 
-This is an PWA wrapper for [Yahoo! Mail](https://mail.yahoo.com),
+This is an desktop wrapper for [Yahoo! Mail](https://mail.yahoo.com),
 built using [Electron](https://www.electronjs.org/). It provides a native
 macOS-style desktop experience for reading your Yahoo! mail in a standalone window.
 
