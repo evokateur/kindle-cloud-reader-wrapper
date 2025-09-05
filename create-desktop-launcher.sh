@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    echo "This script is for Linux systems only. On macOS, use the built .dmg package instead."
+    echo "This script is for Linux systems only. On macOS, you can just move the app bundle built in dist/mac to ~/Applications"
     exit 0
 fi
 
