@@ -7,10 +7,19 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const storageFile = path.join(app.getPath('userData'), 'cloud-reader-data.json');
+const baseDomains = ['amazon.com'];
+const baseUrl = "https://read.amazon.com";
 
-function completeUrl(baseUrl) {
-    const data = fetchAppData();
-    return baseUrl + data.location;
+function isDomainAllowed(url) {
+    try {
+        const hostname = new URL(url).hostname;
+        for (const baseDomain of baseDomains) {
+            if (hostname === baseDomain || hostname.endsWith('.' + baseDomain)) {
+                return true;
+            }
+        }
+    } catch (e) {}
+    return false;
 }
 
 function fetchAppData() {
@@ -35,11 +44,15 @@ function saveAppData(data) {
     }
 }
 
+function resumeUrl() {
+    const data = fetchAppData();
+    return baseUrl + data.location;
+}
+
+
 function createWindow()
 {
     const icon = nativeImage.createFromPath(path.join(__dirname, 'assets/icon.png'));
-    const baseUrl = "https://read.amazon.com";
-    const baseDomain = new URL(baseUrl).hostname.split('.').slice(-2).join('.');
 
     const win = new BrowserWindow({
         width: 1200,
@@ -67,13 +80,13 @@ function createWindow()
     });
 
     win.webContents.on('will-navigate', (event, url) => {
-        const urlDomain = new URL(url).hostname.split('.').slice(-2).join('.');
-        if (!(urlDomain === baseDomain || urlDomain.endsWith('.' + baseDomain))) {
-            event.preventDefault();
-            shell.openExternal(url).catch(error => {
-                console.error('Failed to open external URL:', error);
-            });
+        if (isDomainAllowed(url)) {
+            return;
         }
+        event.preventDefault();
+        shell.openExternal(url).catch(error => {
+            console.error('Failed to open external URL:', error);
+        });
     });
 
     let lastUrl = '';
@@ -101,7 +114,7 @@ function createWindow()
         clearInterval(urlCheckInterval);
     });
 
-    win.loadURL(completeUrl(baseUrl));
+    win.loadURL(resumeUrl());
 }
 
 app.whenReady().then(createWindow);
