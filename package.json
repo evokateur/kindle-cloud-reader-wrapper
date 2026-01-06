@@ -1,24 +1,29 @@
 {
-  "name": "yahoo-mail-wrapper",
-  "version": "1.0.0",
-  "description": "Yahoo! Mail desktop wrapper using Electron",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron .",
-    "package": "electron-builder"
-  },
-  "author": "Wesley Hinkle",
-  "license": "MIT",
-  "devDependencies": {
-    "electron": "^37.2.0",
-    "electron-builder": "^24.13.0"
-  },
-  "build": {
-    "appId": "com.evokateur.yahoo-mail-wrapper",
-    "productName": "Yahoo! Mail",
-    "mac": {
-      "target": "dmg",
-      "icon": "assets/icon.png"
+    "name": "yahoo-mail-wrapper",
+    "version": "1.0.0",
+    "description": "Yahoo! Mail desktop wrapper using Electron",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "package": "electron-builder"
+    },
+    "author": "Wesley Hinkle",
+    "license": "MIT",
+    "devDependencies": {
+        "electron": "^37.2.0",
+        "electron-builder": "^24.13.0"
+    },
+    "build": {
+        "appId": "com.evokateur.yahoo-mail-wrapper",
+        "productName": "Yahoo! Mail",
+        "mac": {
+            "target": "dmg",
+            "icon": "assets/icon.png"
+        },
+        "linux": {
+            "target": "AppImage",
+            "artifactName": "YahooMail.AppImage",
+            "icon": "assets/icon.png"
+        }
     }
-  }
 }
