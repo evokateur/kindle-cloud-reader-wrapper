@@ -55,8 +55,3 @@ npm run package
 
 Output will appear in the `dist/` directory.
 See `package.json` → `build` for details.
-
-## Using this code as a template
-
-This code can be easily modified to create desktop wrappers for other web sites,
-such as [Yahoo! Mail](https://github.com/evokateur/kindle-cloud-reader-wrapper/tree/yahoo-mail).
